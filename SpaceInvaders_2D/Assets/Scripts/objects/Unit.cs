@@ -25,6 +25,10 @@ public class Unit : MonoBehaviour
     {
         gameObject.SetActive(false);
         PlayDeathAnimation();
+        if (this.gameObject.tag == "Player")
+        {
+            GameManager.Instance.OpenMainMenu();
+        }
     }
 
     public virtual void Fire(float speed)
